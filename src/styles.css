@@ -1,0 +1,63 @@
+.App {
+  font-family: sans-serif;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 400px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.search-container {
+  /* border: 2px solid black; */
+  display: flex;
+}
+
+.search-box {
+  width: 400px;
+  padding: 6px;
+  display: flex;
+  margin-right: 4px;
+  margin: 0 4px 4px 0;
+}
+
+.search-button {
+  border: 1px solid green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-container {
+  display: flex;
+  height: 20px;
+  padding: 10px 0 10px 0;
+}
+
+.page-button-prev {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.page-button-next {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.recaptcha-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px
+}
