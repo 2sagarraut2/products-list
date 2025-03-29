@@ -6,27 +6,20 @@ const Products = ({
   products, // to store products
   searchEnabled, // to show search string in UI
 }) => {
+  console.log(products);
   return (
     <div>
       <h6>
         {searchEnabled && <span>Showing results for: {searchValue}</span>}
       </h6>
-      <section className="products">
+      <section className="products-container">
         {products.map((p) => {
           return (
-            <ul key={p.id} className="product">
-              <span className="product-image">
-                <img
-                  width={100}
-                  src={p.images[0]}
-                  alt="prodcut-image"
-                  // lazy loading used for images
-                  loading="lazy"
-                />
-              </span>
-              <h2>{p.title}</h2>
-              <p>{p.description}</p>
-            </ul>
+            <div key={p.id} className="product">
+              <img src={p.images[0]} alt="product" className="product-image" />
+              <div className="product-title">{p.title}</div>
+              <div>{p.description}</div>
+            </div>
           );
         })}
       </section>

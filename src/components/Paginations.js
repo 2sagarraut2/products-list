@@ -7,7 +7,7 @@ const Pagination = ({
   return (
     <div className="pagination-container">
       <button className="page-button-prev" onClick={gotoPrevPage}>
-        Prev.
+        Prev
       </button>
       <span>{currentPage}</span>
       <button className="page-button-next" onClick={gotoNextPage}>

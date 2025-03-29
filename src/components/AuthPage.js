@@ -5,7 +5,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 const AuthPage = ({ onVerify }) => {
   const [verified, setVerified] = useState(false);
 
-  const key = process.env.REACT_APP_CAPTCHA_KEY;
+  const key = "6Ld1qP8qAAAAANi5WCd05zlwCRzsAGVWEvuEi9dJ";
 
   // Handle reCAPTCHA verification
   const handleRecaptcha = (token) => {

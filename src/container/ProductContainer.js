@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Products from "../components/Products";
 import SearchProduct from "../components/SearchProduct";
 import Pagination from "../components/Paginations";
+import Loader from "../components/Loader";
 
 const ProductContainer = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -60,19 +61,21 @@ const ProductContainer = () => {
         setCurrentPage={setCurrentPage}
       />
       {products.length > 0 ? (
-        <Products
-          searchValue={searchValue}
-          products={products}
-          searchEnabled={searchEnabled}
-        />
+        <div>
+          <Products
+            searchValue={searchValue}
+            products={products}
+            searchEnabled={searchEnabled}
+          />
+          <Pagination
+            currentPage={currentPage}
+            gotoNextPage={gotoNextPage}
+            gotoPrevPage={gotoPrevPage}
+          />{" "}
+        </div>
       ) : (
-        <h1>Loading...</h1>
+        <Loader />
       )}
-      <Pagination
-        currentPage={currentPage}
-        gotoNextPage={gotoNextPage}
-        gotoPrevPage={gotoPrevPage}
-      />
     </div>
   );
 };
